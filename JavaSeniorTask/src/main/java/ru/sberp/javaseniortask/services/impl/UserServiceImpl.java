@@ -69,6 +69,7 @@ public class UserServiceImpl implements UserService {
   }
 
   @Override
+  @Cacheable(value = "users", key = "#username")
   public User getByUsername(String username) {
     return repository.findUserByName(username).orElseThrow();
   }
