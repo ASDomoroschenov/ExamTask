@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user-seq
+      author: Alexandr
+      changes:
+        - createSequence:
+            sequenceName: user_seq
+            schemaName: public
+            startValue: 1
+            incrementBy: 1

@@ -1,0 +1,27 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-account-table
+      author: Alexandr
+      changes:
+        - createTable:
+            schemaName: public
+            tableName: account
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    unique: true
+                    primaryKey: true
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_account
+                    unique: true
+                    referencedTableName: user
+                    referencedColumnNames: id
+                    validateForeignKey: true
+              - column:
+                  name: balance
+                  type: decimal

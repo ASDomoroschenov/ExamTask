@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-account-seq
+      author: Alexandr
+      changes:
+        - createSequence:
+            sequenceName: account_seq
+            schemaName: public
+            startValue: 1
+            incrementBy: 1

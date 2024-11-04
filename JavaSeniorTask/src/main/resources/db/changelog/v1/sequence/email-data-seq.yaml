@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-email-data-seq
+      author: Alexandr
+      changes:
+        - createSequence:
+            sequenceName: email_data_seq
+            schemaName: public
+            startValue: 1
+            incrementBy: 1

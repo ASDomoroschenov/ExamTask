@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-email-data-table
+      author: Alexandr
+      changes:
+        - createTable:
+            schemaName: public
+            tableName: email_data
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    unique: true
+                    primaryKey: true
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_email_data
+                    referencedTableName: user
+                    referencedColumnNames: id
+                    validateForeignKey: true
+              - column:
+                  name: email
+                  type: varchar(200)
+                  constraints:
+                    unique: true

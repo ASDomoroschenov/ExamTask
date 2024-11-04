@@ -1,0 +1,25 @@
+databaseChangeLog:
+  - include:
+      file: v1/table/user-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: v1/table/phone-data-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: v1/table/email-data-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: v1/table/account-table.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: v1/sequence/user-seq.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: v1/sequence/phone-data-seq.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: v1/sequence/email-data-seq.yaml
+      relativeToChangelogFile: true
+  - include:
+      file: v1/sequence/account-seq.yaml
+      relativeToChangelogFile: true

@@ -1,0 +1,24 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-user-table
+      author: Alexandr
+      changes:
+        - createTable:
+            schemaName: public
+            tableName: user
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    unique: true
+                    primaryKey: true
+              - column:
+                  name: name
+                  type: varchar(500)
+              - column:
+                  name: date_of_birth
+                  type: date
+              - column:
+                  name: password
+                  type: varchar(500)

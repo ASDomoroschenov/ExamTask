@@ -1,0 +1,28 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-phone-data-table
+      author: Alexandr
+      changes:
+        - createTable:
+            schemaName: public
+            tableName: phone_data
+            columns:
+              - column:
+                  name: id
+                  type: bigint
+                  constraints:
+                    unique: true
+                    primaryKey: true
+              - column:
+                  name: user_id
+                  type: bigint
+                  constraints:
+                    foreignKeyName: fk_phone_data
+                    referencedTableName: user
+                    referencedColumnNames: id
+                    validateForeignKey: true
+              - column:
+                  name: phone
+                  type: varchar(13)
+                  constraints:
+                    unique: true

@@ -1,0 +1,10 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-phone-data-seq
+      author: Alexandr
+      changes:
+        - createSequence:
+            sequenceName: phone_data_seq
+            schemaName: public
+            startValue: 1
+            incrementBy: 1
